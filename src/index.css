@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/* ===== GRAVITY LANDING — Design Tokens ===== */
+@theme {
+  --color-gravity-black: #01040D;
+  --color-gravity-navy: #0E1540;
+  --color-gravity-royal: #162473;
+  --color-gravity-indigo: #6852F2;
+  --color-gravity-blue: #5C82F2;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --animate-fade-in-up: fade-in-up 0.8s ease-out both;
+  --animate-fade-in-down: fade-in-down 0.6s ease-out both;
+}
+
+/* ===== CSS Variables for var() usage ===== */
+:root {
+  --bg-primary: #01040D;
+  --bg-secondary: #0E1540;
+  --bg-elevated: #162473;
+  --accent-primary: #6852F2;
+  --accent-secondary: #5C82F2;
+  --text-white: #FFFFFF;
+  --text-dim: rgba(255, 255, 255, 0.6);
+  --text-muted: rgba(255, 255, 255, 0.4);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-light: rgba(255, 255, 255, 0.12);
+}
+
+/* ===== Keyframes ===== */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-down {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Base ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-white);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Nav Link Hover Underline ===== */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--text-white) !important;
+}
+
+/* ===== Utility Classes ===== */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+.animation-delay-600 { animation-delay: 600ms; }
