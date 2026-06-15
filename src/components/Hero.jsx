@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import heroImage from '../assets/img1.png';
+import logoImage from '../assets/logo.png';
 
 const words = ['página web', 'tienda online', 'aplicación', 'software'];
 
@@ -21,21 +22,26 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen overflow-hidden flex flex-col"
-      style={{ backgroundColor: 'var(--bg-primary)' }}
+      className="relative min-h-screen overflow-hidden flex flex-col bg-universe"
     >
 
-      {/* Background glows */}
+      {/* Background glows & Stars */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute rounded-full" style={{ top: '-200px', right: '-150px', width: '700px', height: '700px', background: 'var(--accent-primary)', opacity: 0.15, filter: 'blur(120px)' }} />
-        <div className="absolute rounded-full" style={{ bottom: '-200px', left: '-100px', width: '600px', height: '600px', background: 'var(--accent-secondary)', opacity: 0.12, filter: 'blur(130px)' }} />
-        <div className="absolute rounded-full" style={{ top: '40%', left: '50%', transform: 'translate(-50%, -50%)', width: '800px', height: '500px', background: 'var(--bg-elevated)', opacity: 0.25, filter: 'blur(100px)' }} />
-        <div className="absolute rounded-full" style={{ top: '30%', right: '15%', width: '300px', height: '300px', background: 'var(--accent-primary)', opacity: 0.2, filter: 'blur(80px)' }} />
-        <div className="absolute" style={{ bottom: 0, left: 0, right: 0, height: '40%', background: 'linear-gradient(to top, var(--bg-secondary), transparent)', opacity: 0.5 }} />
+        {/* Star layers */}
+        <div className="absolute inset-0 stars-small z-0 opacity-70" />
+        <div className="absolute inset-0 stars-medium z-0 opacity-60" />
+
+        {/* Purple Nebulas / Glows */}
+        <div className="absolute rounded-full z-0 animate-float" style={{ top: '-10%', right: '-10%', width: '50vw', height: '50vw', background: 'var(--accent-primary)', opacity: 0.2, filter: 'blur(150px)' }} />
+        <div className="absolute rounded-full z-0 animate-float-reverse" style={{ bottom: '-10%', left: '-10%', width: '40vw', height: '40vw', background: '#9333ea', opacity: 0.15, filter: 'blur(130px)' }} />
+        <div className="absolute rounded-full z-0" style={{ top: '40%', left: '50%', transform: 'translate(-50%, -50%)', width: '70vw', height: '40vw', background: '#3b0764', opacity: 0.4, filter: 'blur(120px)' }} />
+
+        {/* Bottom fade */}
+        <div className="absolute z-0" style={{ bottom: 0, left: 0, right: 0, height: '40%', background: 'linear-gradient(to top, #070014, transparent)', opacity: 0.9 }} />
       </div>
 
       {/* ===== NAV BAR ===== */}
-      <nav className="relative z-20 w-full py-5">
+      <nav className="relative z-20 w-full py-5 mt-4">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
 
           {/* Left: Links */}
@@ -47,9 +53,9 @@ const Hero = () => {
           </div>
 
           {/* Center: Logo */}
-          <div className="flex justify-center" style={{ width: '33.333%' }}>
-            <a href="/" className="text-2xl font-bold tracking-wide" style={{ color: 'var(--text-white)' }}>
-              Gravity
+          <div className="flex justify-center relative" style={{ width: '33.333%' }}>
+            <a href="/" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+              <img src={logoImage} alt="Gravity Logo" className="h-[140px] w-auto" />
             </a>
           </div>
 
