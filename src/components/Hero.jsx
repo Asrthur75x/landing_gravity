@@ -41,7 +41,7 @@ const Hero = () => {
       </div>
 
       {/* ===== NAV BAR ===== */}
-      <nav className="relative z-20 w-full py-5 mt-4">
+      <nav className="relative z-20 w-full py-5 mt-6">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
 
           {/* Left: Links */}
