@@ -42,14 +42,14 @@ const Hero = () => {
 
       {/* ===== NAV BAR ===== */}
       <nav className="relative z-20 w-full py-5 mt-6">
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <div className="w-full px-6 md:px-12 lg:px-24 xl:px-32 flex items-center justify-between">
 
           {/* Left: Links */}
           <div className="flex items-center gap-8" style={{ width: '33.333%' }}>
-            <a href="#inicio" className="nav-link text-sm font-medium transition-colors" style={{ color: 'var(--text-white)' }}>Inicio</a>
-            <a href="#servicios" className="nav-link text-sm font-medium transition-colors" style={{ color: 'var(--text-dim)' }}>Servicios</a>
-            <a href="#planes" className="nav-link text-sm font-medium transition-colors" style={{ color: 'var(--text-dim)' }}>Planes</a>
-            <a href="#proyectos" className="nav-link text-sm font-medium transition-colors" style={{ color: 'var(--text-dim)' }}>Proyectos</a>
+            <a href="#hero" className="nav-link text-sm font-medium transition-colors" style={{ color: 'var(--text-white)' }}>Inicio</a>
+            <a href="#services" className="nav-link text-sm font-medium transition-colors" style={{ color: 'var(--text-dim)' }}>Servicios</a>
+            <a href="#pricing" className="nav-link text-sm font-medium transition-colors" style={{ color: 'var(--text-dim)' }}>Planes</a>
+            <a href="#projects" className="nav-link text-sm font-medium transition-colors" style={{ color: 'var(--text-dim)' }}>Proyectos</a>
           </div>
 
           {/* Center: Logo */}
@@ -75,7 +75,7 @@ const Hero = () => {
 
       {/* ===== HERO CONTENT ===== */}
       <div className="flex-1 flex items-center relative z-10">
-        <div className="max-w-7xl mx-auto px-6 w-full flex flex-col lg:flex-row items-center gap-16">
+        <div className="w-full px-6 md:px-12 lg:px-24 xl:px-32 flex flex-col lg:flex-row items-center gap-16">
 
           {/* Left: Text */}
           <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
@@ -109,7 +109,7 @@ const Hero = () => {
                 Empezar Proyecto
               </a>
               <a
-                href="#proyectos"
+                href="#projects"
                 className="inline-block px-8 py-3.5 rounded-full text-sm font-semibold transition-all duration-300"
                 style={{ color: 'var(--text-white)', border: '1px solid var(--border-light)' }}
               >

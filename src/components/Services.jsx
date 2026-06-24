@@ -4,7 +4,7 @@ import { Code2, Smartphone, Paintbrush, Zap, Blocks } from 'lucide-react';
 const ServiceCard = ({ icon: Icon, title, description, className, delay, iconColor = "text-[var(--accent-secondary)]" }) => {
   return (
     <div
-      className={`group relative overflow-hidden bg-[var(--bg-secondary)]/40 backdrop-blur-xl rounded-[2rem] border border-[var(--border-subtle)] hover:border-[var(--accent-primary)]/50 transition-all duration-500 animate-fade-in-up ${className} ${delay} flex flex-col justify-center min-h-[220px] p-8 md:p-10 hover:shadow-[0_0_40px_rgba(104,82,242,0.15)] hover:-translate-y-1`}
+      className={`group relative overflow-hidden bg-[var(--bg-secondary)]/40 backdrop-blur-xl rounded-[2rem] border border-[var(--border-subtle)] shadow-[0_15px_40px_-15px_rgba(104,82,242,0.2)] hover:border-[var(--accent-primary)]/50 transition-all duration-500 animate-fade-in-up ${className} ${delay} flex flex-col justify-center min-h-[220px] p-8 md:p-10 hover:shadow-[0_20px_50px_-10px_rgba(104,82,242,0.3)] hover:-translate-y-2`}
     >
       {/* Gravity Theme Hover Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-primary)]/5 to-[var(--accent-secondary)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -77,12 +77,12 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="relative py-32 bg-[var(--bg-primary)] overflow-hidden">
+    <section id="services" className="relative pt-12 pb-32 md:pt-16 bg-[var(--bg-primary)] overflow-hidden">
 
       {/* Background Elements */}
       <div className="absolute inset-0 bg-universe pointer-events-none opacity-30 z-0"></div>
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-7xl">
+      <div className="w-full px-6 md:px-12 lg:px-24 xl:px-32 relative z-10">
 
         {/* Section Header */}
         <div className="mb-14 animate-fade-in-up flex flex-col items-center text-center">

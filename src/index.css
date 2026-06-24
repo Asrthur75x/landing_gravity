@@ -30,32 +30,70 @@
 
 /* ===== Keyframes ===== */
 @keyframes fade-in-up {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fade-in-down {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes float-blob {
-  0% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(50px, -50px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
-  100% { transform: translate(0, 0) scale(1); }
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(50px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
 }
 
 @keyframes float-blob-reverse {
-  0% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(-50px, 50px) scale(1.1); }
-  66% { transform: translate(20px, -20px) scale(0.9); }
-  100% { transform: translate(0, 0) scale(1); }
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(-50px, 50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(20px, -20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
 }
 
 /* ===== Base ===== */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 0px;
+  /* Offset for anchor links so titles don't stick to the top */
 }
 
 body {
@@ -101,12 +139,29 @@ body {
   background-clip: text;
 }
 
-.animation-delay-200 { animation-delay: 200ms; }
-.animation-delay-400 { animation-delay: 400ms; }
-.animation-delay-600 { animation-delay: 600ms; }
-.animation-delay-800 { animation-delay: 800ms; }
-.animation-delay-\[1000ms\] { animation-delay: 1000ms; }
-.animation-delay-\[1200ms\] { animation-delay: 1200ms; }
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+.animation-delay-800 {
+  animation-delay: 800ms;
+}
+
+.animation-delay-\[1000ms\] {
+  animation-delay: 1000ms;
+}
+
+.animation-delay-\[1200ms\] {
+  animation-delay: 1200ms;
+}
 
 /* ===== UNIVERSE THEME ===== */
 .bg-universe {
@@ -114,37 +169,42 @@ body {
 }
 
 .stars-small {
-  background-image: 
-    radial-gradient(1px 1px at 25px 5px, rgba(255,255,255,0.7), transparent),
-    radial-gradient(1px 1px at 50px 25px, rgba(255,255,255,0.8), transparent),
-    radial-gradient(1px 1px at 125px 20px, rgba(255,255,255,0.6), transparent),
-    radial-gradient(1.5px 1.5px at 50px 75px, rgba(255,255,255,0.9), transparent),
-    radial-gradient(2px 2px at 15px 125px, rgba(255,255,255,0.7), transparent),
-    radial-gradient(2.5px 2.5px at 110px 140px, rgba(255,255,255,0.5), transparent);
+  background-image:
+    radial-gradient(1px 1px at 25px 5px, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 50px 25px, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 125px 20px, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1.5px 1.5px at 50px 75px, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(2px 2px at 15px 125px, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(2.5px 2.5px at 110px 140px, rgba(255, 255, 255, 0.5), transparent);
   background-size: 150px 150px;
   animation: stars-drift 60s linear infinite;
 }
 
 .stars-medium {
-  background-image: 
-    radial-gradient(1px 1px at 75px 125px, rgba(255,255,255,0.8), transparent),
-    radial-gradient(1.5px 1.5px at 100px 75px, rgba(255,255,255,0.8), transparent),
-    radial-gradient(2px 2px at 199px 100px, rgba(200,200,255,0.9), transparent),
-    radial-gradient(2px 2px at 20px 50px, rgba(255,255,255,0.8), transparent),
-    radial-gradient(2.5px 2.5px at 100px 5px, rgba(255,200,255,0.9), transparent),
-    radial-gradient(3px 3px at 5px 5px, rgba(255,255,255,0.8), transparent);
+  background-image:
+    radial-gradient(1px 1px at 75px 125px, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1.5px 1.5px at 100px 75px, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 199px 100px, rgba(200, 200, 255, 0.9), transparent),
+    radial-gradient(2px 2px at 20px 50px, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(2.5px 2.5px at 100px 5px, rgba(255, 200, 255, 0.9), transparent),
+    radial-gradient(3px 3px at 5px 5px, rgba(255, 255, 255, 0.8), transparent);
   background-size: 250px 250px;
   animation: stars-drift 100s linear infinite;
 }
 
 @keyframes stars-drift {
-  from { background-position: 0 0; }
-  to { background-position: 0 -1500px; }
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 0 -1500px;
+  }
 }
 
 .bg-grid {
   background-size: 50px 50px;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
