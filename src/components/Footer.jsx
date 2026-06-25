@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImage from '../assets/logo.png';
 
 export default function Footer() {
   return (
@@ -12,10 +13,10 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row justify-between gap-16 mb-20">
 
           {/* Brand & Description (Left) */}
-          <div className="max-w-sm">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">GRAVITY</h3>
+          <div className="max-w-sm flex flex-col items-start">
+            <img src={logoImage} alt="Gravity Logo" className="h-[100px] lg:h-[150px] w-auto -ml-4 -mt-4 lg:-mt-10 -mb-4 lg:-mb-8" />
             <p className="text-[var(--text-dim)] text-sm md:text-base leading-relaxed">
-              Agencia digital integral especializada en diseño web, tiendas virtuales y soluciones a medida para potenciar negocios a nivel mundial.
+              Agencia digital integral especializada en diseño web, tiendas virtuales y soluciones a medida para potenciar negocios.
             </p>
           </div>
 

@@ -30,7 +30,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="relative pt-12 pb-24 md:pt-16 md:pb-32 bg-[var(--bg-primary)] overflow-hidden">
+    <section id="projects" className="relative scroll-mt-24 md:scroll-mt-28 pt-12 pb-24 md:pt-16 md:pb-32 bg-[var(--bg-primary)] overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-universe pointer-events-none opacity-40 z-0"></div>
       <div className="absolute top-1/4 -left-64 w-96 h-96 bg-[var(--accent-primary)] rounded-full blur-[150px] opacity-20 pointer-events-none z-0"></div>

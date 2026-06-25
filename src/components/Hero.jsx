@@ -4,7 +4,7 @@ import logoImage from '../assets/logo.png';
 
 const words = ['página web', 'tienda online', 'aplicación', 'software'];
 
-const Hero = () => {
+const Hero = ({ onNavigate }) => {
   const [currentWord, setCurrentWord] = useState(0);
   const [fade, setFade] = useState(true);
 
@@ -40,41 +40,10 @@ const Hero = () => {
         <div className="absolute z-0" style={{ bottom: 0, left: 0, right: 0, height: '40%', background: 'linear-gradient(to top, #070014, transparent)', opacity: 0.9 }} />
       </div>
 
-      {/* ===== NAV BAR ===== */}
-      <nav className="relative z-20 w-full py-5 mt-6">
-        <div className="w-full px-6 md:px-12 lg:px-24 xl:px-32 flex items-center justify-between">
 
-          {/* Left: Links */}
-          <div className="flex items-center gap-8" style={{ width: '33.333%' }}>
-            <a href="#hero" className="nav-link text-sm font-medium transition-colors" style={{ color: 'var(--text-white)' }}>Inicio</a>
-            <a href="#services" className="nav-link text-sm font-medium transition-colors" style={{ color: 'var(--text-dim)' }}>Servicios</a>
-            <a href="#pricing" className="nav-link text-sm font-medium transition-colors" style={{ color: 'var(--text-dim)' }}>Planes</a>
-            <a href="#projects" className="nav-link text-sm font-medium transition-colors" style={{ color: 'var(--text-dim)' }}>Proyectos</a>
-          </div>
-
-          {/* Center: Logo */}
-          <div className="flex justify-center relative" style={{ width: '33.333%' }}>
-            <a href="/" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
-              <img src={logoImage} alt="Gravity Logo" className="h-[140px] w-auto" />
-            </a>
-          </div>
-
-          {/* Right: Contact */}
-          <div className="flex items-center justify-end" style={{ width: '33.333%' }}>
-            <a
-              href="#contacto"
-              className="px-6 py-2.5 rounded-full text-sm font-semibold transition-colors"
-              style={{ color: 'var(--text-white)', backgroundColor: 'var(--accent-primary)', boxShadow: '0 0 20px rgba(104,82,242,0.35)' }}
-            >
-              Contáctanos
-            </a>
-          </div>
-
-        </div>
-      </nav>
 
       {/* ===== HERO CONTENT ===== */}
-      <div className="flex-1 flex items-center relative z-10">
+      <div className="flex-1 flex items-center relative z-10 pt-20 md:pt-28 lg:pt-36 pb-10">
         <div className="w-full px-6 md:px-12 lg:px-24 xl:px-32 flex flex-col lg:flex-row items-center gap-16">
 
           {/* Left: Text */}
@@ -101,13 +70,16 @@ const Hero = () => {
             </p>
 
             <div className="flex items-center gap-4 animate-fade-in-up animation-delay-400">
-              <a
-                href="#contacto"
-                className="inline-block px-8 py-3.5 rounded-full text-sm font-semibold transition-all duration-300"
+              <button
+                onClick={() => {
+                  onNavigate('contact');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="inline-block px-8 py-3.5 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer"
                 style={{ color: 'var(--text-white)', backgroundColor: 'var(--accent-primary)', boxShadow: '0 0 25px rgba(104,82,242,0.4)' }}
               >
                 Empezar Proyecto
-              </a>
+              </button>
               <a
                 href="#projects"
                 className="inline-block px-8 py-3.5 rounded-full text-sm font-semibold transition-all duration-300"

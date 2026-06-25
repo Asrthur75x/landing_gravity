@@ -104,7 +104,7 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing" className="relative pt-12 pb-24 md:pt-16 md:pb-32 bg-[var(--bg-primary)] overflow-hidden">
+    <section id="pricing" className="relative scroll-mt-24 md:scroll-mt-28 pt-12 pb-24 md:pt-16 md:pb-32 bg-[var(--bg-primary)] overflow-hidden">
 
       {/* Background Elements */}
       <div className="absolute inset-0 bg-universe pointer-events-none opacity-40 z-0"></div>
