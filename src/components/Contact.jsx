@@ -81,7 +81,7 @@ const Contact = () => {
             </div>
 
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold mb-3 tracking-tight" style={{ color: 'var(--text-white)' }}>Impulsa tu visión</h3>
+              <h3 className="text-xl md:text-2xl font-bold mb-3 tracking-tight" style={{ color: 'var(--text-white)' }}>Impulsa tu visión</h3>
               <p className="text-sm leading-relaxed" style={{ color: 'var(--text-dim)' }}>
                 Cuéntanos sobre tu proyecto. Estamos aquí para brindarte asesoría y soluciones digitales a la medida de tu negocio.
               </p>

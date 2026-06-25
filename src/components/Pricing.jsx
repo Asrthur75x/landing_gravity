@@ -11,7 +11,7 @@ const PricingCard = ({ title, features, isPopular, delay }) => {
     >
       {/* Top section: Title & Badge */}
       <div className="flex justify-between items-center mb-8">
-        <h3 className="text-2xl font-bold text-white tracking-tight">
+        <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">
           {title}
         </h3>
         {isPopular && (

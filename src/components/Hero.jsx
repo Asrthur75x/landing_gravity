@@ -43,12 +43,12 @@ const Hero = ({ onNavigate }) => {
 
 
       {/* ===== HERO CONTENT ===== */}
-      <div className="flex-1 flex items-center relative z-10 pt-20 md:pt-28 lg:pt-36 pb-10">
-        <div className="w-full px-6 md:px-12 lg:px-24 xl:px-32 flex flex-col lg:flex-row items-center gap-16">
+      <div className="flex-1 flex items-center relative z-10 pt-30 md:pt-28 lg:pt-36 pb-10">
+        <div className="w-full px-6 md:px-12 lg:px-24 xl:px-32 flex flex-col lg:flex-row items-center gap-8 md:gap-16">
 
           {/* Left: Text */}
           <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-6 animate-fade-in-up" style={{ color: 'var(--text-white)' }}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-4 md:mb-6 animate-fade-in-up" style={{ color: 'var(--text-white)' }}>
               Creamos tu<br />
               <span
                 className="rotating-word"
@@ -64,33 +64,32 @@ const Hero = ({ onNavigate }) => {
               </span>
             </h1>
 
-            <p className="text-base mb-10 leading-relaxed max-w-md animate-fade-in-up animation-delay-200" style={{ color: 'var(--text-dim)' }}>
-              Atrae más clientes con un diseño moderno y rápido.
-              Nos encargamos de todo para que tu negocio crezca en internet.
+            <p className="text-sm md:text-base mb-6 md:mb-10 leading-relaxed max-w-md animate-fade-in-up animation-delay-200" style={{ color: 'var(--text-dim)' }}>
+              Diseños modernos y rápidos para hacer crecer tu negocio en internet.
             </p>
 
-            <div className="flex items-center gap-4 animate-fade-in-up animation-delay-400">
+            <div className="flex items-center gap-3 md:gap-4 animate-fade-in-up animation-delay-400">
               <button
                 onClick={() => {
                   onNavigate('contact');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="inline-block px-8 py-3.5 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer"
+                className="inline-block px-6 md:px-8 py-3.5 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer"
                 style={{ color: 'var(--text-white)', backgroundColor: 'var(--accent-primary)', boxShadow: '0 0 25px rgba(104,82,242,0.4)' }}
               >
-                Empezar Proyecto
+                Empezar
               </button>
               <a
                 href="#projects"
-                className="inline-block px-8 py-3.5 rounded-full text-sm font-semibold transition-all duration-300"
+                className="inline-block px-6 md:px-8 py-3.5 rounded-full text-sm font-semibold transition-all duration-300"
                 style={{ color: 'var(--text-white)', border: '1px solid var(--border-light)' }}
               >
-                Ver Proyectos
+                Proyectos
               </a>
             </div>
 
             {/* Features row */}
-            <div className="flex items-center gap-10 mt-14 animate-fade-in-up animation-delay-600">
+            <div className="hidden md:flex items-center gap-10 mt-14 animate-fade-in-up animation-delay-600">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-subtle)' }}>
                   <svg className="w-5 h-5" style={{ color: 'var(--accent-secondary)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">

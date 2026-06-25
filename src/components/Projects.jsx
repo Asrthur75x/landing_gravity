@@ -50,7 +50,7 @@ export default function Projects() {
                 </span>
               </span>
             </h2>
-            <p className="text-base md:text-lg text-[var(--text-dim)]">
+            <p className="text-sm md:text-base text-[var(--text-dim)] max-w-xl mx-auto">
               Descubre cómo hemos ayudado a diversas empresas a transformar sus ideas en soluciones digitales escalables y atractivas.
             </p>
           </div>
@@ -88,11 +88,11 @@ export default function Projects() {
               {/* Content Container */}
               <div className="p-8 relative z-20 flex-grow bg-[var(--bg-secondary)]/20 backdrop-blur-sm">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-bold text-white group-hover:text-[var(--accent-secondary)] transition-colors">
+                  <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-[var(--accent-secondary)] transition-colors">
                     {project.title}
                   </h3>
                 </div>
-                <p className="text-[var(--text-dim)] text-sm leading-relaxed mb-6">
+                <p className="text-[var(--text-dim)] text-sm md:text-[15px] leading-relaxed mb-6">
                   {project.description}
                 </p>
 

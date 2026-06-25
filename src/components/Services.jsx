@@ -4,7 +4,7 @@ import { Code2, Smartphone, Paintbrush, Zap, Blocks } from 'lucide-react';
 const ServiceCard = ({ icon: Icon, title, description, className, delay, iconColor = "text-[var(--accent-secondary)]" }) => {
   return (
     <div
-      className={`group relative overflow-hidden bg-[var(--bg-secondary)]/40 backdrop-blur-xl rounded-[2rem] border border-[var(--border-subtle)] shadow-[0_15px_40px_-15px_rgba(104,82,242,0.2)] hover:border-[var(--accent-primary)]/50 transition-all duration-500 animate-fade-in-up ${className} ${delay} flex flex-col justify-center min-h-[220px] p-8 md:p-10 hover:shadow-[0_20px_50px_-10px_rgba(104,82,242,0.3)] hover:-translate-y-2`}
+      className={`group relative overflow-hidden bg-[var(--bg-secondary)]/40 backdrop-blur-xl rounded-[2rem] border border-[var(--border-subtle)] shadow-[0_15px_40px_-15px_rgba(104,82,242,0.2)] hover:border-[var(--accent-primary)]/50 transition-all duration-500 animate-fade-in-up ${className} ${delay} flex flex-col justify-center min-h-[160px] md:min-h-[220px] p-6 md:p-10 hover:shadow-[0_20px_50px_-10px_rgba(104,82,242,0.3)] hover:-translate-y-2`}
     >
       {/* Gravity Theme Hover Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-primary)]/5 to-[var(--accent-secondary)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -14,17 +14,17 @@ const ServiceCard = ({ icon: Icon, title, description, className, delay, iconCol
         {/* Ambient glow behind the icon */}
         <div className={`absolute inset-0 blur-[40px] opacity-30 rounded-full ${iconColor.replace('text-', 'bg-')}`}></div>
         <Icon
-          className={`relative z-10 w-32 h-32 md:w-40 md:h-40 ${iconColor}`}
+          className={`relative z-10 w-24 h-24 md:w-40 md:h-40 ${iconColor}`}
           style={{ filter: 'drop-shadow(0 0 15px currentColor)', strokeWidth: 1.2 }}
         />
       </div>
 
       {/* Foreground Content */}
       <div className="relative z-10 max-w-[85%] md:max-w-[75%]">
-        <h3 className="text-2xl font-bold text-white mb-2 tracking-tight group-hover:text-[var(--accent-secondary)] transition-colors duration-300">
+        <h3 className="text-xl md:text-2xl font-bold text-white mb-2 tracking-tight group-hover:text-[var(--accent-secondary)] transition-colors duration-300">
           {title}
         </h3>
-        <p className="text-[15px] md:text-base text-[var(--text-dim)] leading-relaxed group-hover:text-white/80 transition-colors duration-300">
+        <p className="text-sm md:text-[15px] text-[var(--text-dim)] leading-relaxed group-hover:text-white/80 transition-colors duration-300">
           {description}
         </p>
       </div>
@@ -80,6 +80,7 @@ export default function Services() {
     <section id="services" className="relative scroll-mt-24 md:scroll-mt-28 pt-12 pb-32 md:pt-16 bg-[var(--bg-primary)] overflow-hidden">
 
       {/* Background Elements */}
+      <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-[#070014] to-transparent z-0 pointer-events-none md:hidden"></div>
       <div className="absolute inset-0 bg-universe pointer-events-none opacity-30 z-0"></div>
 
       <div className="w-full px-6 md:px-12 lg:px-24 xl:px-32 relative z-10">
